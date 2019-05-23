@@ -4,6 +4,29 @@
   background-color: #fed136;
   border-radius: 5px;
   border: none; }
+  .btn-main p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase; }
+
+.container {
+  width: 70%; }
+
+.sect-title {
+  color: #222;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 75px;
+  text-transform: uppercase;
+  letter-spacing: -1px; }
+
+.sect-descr {
+  color: #777;
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  font-style: italic; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
