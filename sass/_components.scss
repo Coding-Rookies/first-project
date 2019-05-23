@@ -6,4 +6,32 @@
     background-color: $btn-color;
     border-radius: 5px;
     border: none;
+
+    p {
+        color: $basic-font-color;
+        font-size: $other-font-size;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+.container {
+    width: 70%;
+}
+
+.sect-title {
+    color: $font-color;
+    font-family: $primary-font;
+    font-size: $title-font-size;
+    font-weight: 700;
+    line-height: 75px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.sect-descr {
+    color: $second-font-color;
+    font-family: $secondary-font;
+    font-size: $title-description;
+    font-style: italic;
 }
