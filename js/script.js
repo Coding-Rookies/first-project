@@ -4,16 +4,23 @@ let mobileNav = document.querySelector(".mobile-nav");
 
 backdrop.addEventListener("click", function () {
     mobileNav.classList.remove("active");
-    setTimeout(function () {
-        backdrop.classList.remove("active");
-    }, 500);
+    backdrop.classList.remove("active");
 })
 
-// Menu hamburger 
+// Menu hamburger
 toggleButton.addEventListener("click", function () {
-    mobileNav.classList.toggle("active");
+    mobileNav.classList.add("active");
     // backdrop.classList.toggle("active");
+    backdrop.style.display = "block";
     setTimeout(function () {
-        backdrop.classList.toggle("active");
-    }, 500)
+        backdrop.classList.add("active");
+    }, 200)
 })
+
+if (toggleButton) {
+    toggleButton.addEventListener("click", function () {
+        setTimeout(function () {
+            backdrop.style.display = "none";
+        }, 2000);
+    })
+}
