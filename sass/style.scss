@@ -5,6 +5,222 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: $basic-font-color;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.active {
+    display: block !important;
+}
+
+.backdrop {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.main-header {
+    width: 100%;
+    height: 90vh;
+    background-image: url(../images/old-1130743_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    .toggle-button {
+        position: absolute;
+        top: 3%;
+        right: 8%;
+        width: 2rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        .toggle-button:focus {
+            outline: none;
+        }
+
+        .toggle-button_bar {
+            width: 100%;
+            height: 0.2rem;
+            background: black;
+            display: block;
+            margin: 0.6rem 0;
+        }
+
+        @media (min-width: 641px) {
+            display: none;
+        }
+    }
+
+    .main-nav-golden {
+        position: absolute;
+        top: 0;
+        left: 10%;
+        text-transform: lowercase;
+        color: $btn-color;
+        font-family: $secondary-font;
+        font-style: italic;
+        font-size: 1.5rem;
+        text-decoration: none;
+        padding: 2rem 0;
+
+        @media (max-width: 4rem) {
+            left: 5%;
+        }
+    }
+
+    .main-nav-golden:hover {
+        color: #edc025;
+    }
+
+    .main-nav-items {
+        display: flex;
+        width: 90%;
+        list-style: none;
+        padding: 2rem 0;
+        justify-content: flex-end;
+        align-items: center;
+
+        @media (max-width: 40rem) {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            width: 95%;
+        }
+
+        .main-nav-item a {
+            display: inline-block;
+            color: $basic-font-color;
+            text-transform: uppercase;
+            font-size: $title-description;
+            text-decoration: none;
+            padding: .5rem;
+            margin: 0 .7rem;
+
+            @media (max-width: 1024px) {
+                width: 95%;
+                margin: 0 .2rem;
+            }
+        }
+
+        .main-nav-item a:hover {
+            border-bottom: 2px solid #ddd;
+            color: #ddd;
+        }
+    }
+
+    .section-header {
+        display: flex;
+        height: 50vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 4rem;
+
+        @media (min-width: 812px) {
+            margin-top: 2rem;
+        }
+
+        .btn-main {
+            display: block;
+            cursor: pointer;
+            width: 240px;
+            height: 65px;
+            background-color: $btn-color;
+            border-radius: 5px;
+            border: none;
+            color: $basic-font-color;
+            font-size: $other-font-size;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            @media (max-width: 40rem) {
+                width: 120px;
+                height: 37px;
+                font-weight: 400;
+                border-radius: 2px;
+                font-size: $small-font;
+            }
+        }
+
+        .btn-main:hover {
+            background: #edc025;
+        }
+    }
+
+    .section-header h2 {
+        color: $basic-font-color;
+        font-size: ($title-font-size/2);
+        font-style: italic;
+
+        @media (min-width: 641px) {
+            font-size: ($title-font-size*0.75);
+        }
+
+        @media (min-width: 1024px) {
+            font-size: $title-font-size;
+        }
+    }
+
+    .section-header h1 {
+        color: $basic-font-color;
+        text-transform: uppercase;
+        margin: 30px;
+        font-family: $primary-font;
+        font-size: 1.5rem;
+
+        @media (min-width: 641px) {
+            font-size: 3rem;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 4rem;
+        }
+    }
+}
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 70%;
+    height: 100vh;
+    z-index: 2019;
+
+    .mobile-nav__items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+        list-style: none;
+        margin: 0 auto;
+
+        .mobile-nav__item {
+            margin: 1rem 0;
+        }
+
+        .mobile-nav__item a {
+            display: inline-block;
+            color: $font-color;
+            text-transform: uppercase;
+            font-size: $title-description;
+            text-decoration: none;
+            font-size: 1.5rem;
+            padding: .5rem;
+            margin: 0 .7rem;
+        }
+    }
 }
