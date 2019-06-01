@@ -11,20 +11,26 @@
 
 html {
     scroll-behavior: smooth;
+    // background: #777;
 }
 
 .active {
     display: block !important;
+    opacity: 1 !important;
+    transform: translateX(0) !important;
 }
 
 .backdrop {
     position: fixed;
     display: none;
+    opacity: 0;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    transition: opacity .5s
 }
 
 .main-header {
@@ -63,7 +69,7 @@ html {
 
     .main-nav-golden {
         position: absolute;
-        top: 0;
+        top: 5%;
         left: 10%;
         text-transform: lowercase;
         color: $btn-color;
@@ -71,10 +77,13 @@ html {
         font-style: italic;
         font-size: 1.5rem;
         text-decoration: none;
-        padding: 2rem 0;
+        padding: .4rem 0;
+        vertical-align: middle;
 
         @media (max-width: 4rem) {
             left: 5%;
+            // left: 50%;
+            // transform: translateX(-50%);
         }
     }
 
@@ -113,8 +122,9 @@ html {
             }
         }
 
-        .main-nav-item a:hover {
-            border-bottom: 2px solid #ddd;
+        .main-nav-item a:hover,
+        .main-nav-item a:active {
+            // border-bottom: 2px solid #ddd;
             color: #ddd;
         }
     }
@@ -190,38 +200,40 @@ html {
 }
 
 .mobile-nav {
-    display: none;
+    // display: none;
     position: fixed;
     top: 0;
     left: 0;
-    background: white;
-    width: 70%;
+    background: #ddd;
+    width: 80%;
     height: 100vh;
     z-index: 2019;
+    transform: translateX(-100%);
+    transition: transform .5s linear;
+}
 
-    .mobile-nav__items {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 90%;
-        height: 100%;
-        list-style: none;
-        margin: 0 auto;
+.mobile-nav__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    list-style: none;
+    margin: 0 auto;
 
-        .mobile-nav__item {
-            margin: 1rem 0;
-        }
+    .mobile-nav__item {
+        margin: 1rem 0;
+    }
 
-        .mobile-nav__item a {
-            display: inline-block;
-            color: $font-color;
-            text-transform: uppercase;
-            font-size: $title-description;
-            text-decoration: none;
-            font-size: 1.5rem;
-            padding: .5rem;
-            margin: 0 .7rem;
-        }
+    .mobile-nav__item a {
+        display: inline-block;
+        color: $font-color;
+        text-transform: uppercase;
+        font-size: $title-description;
+        text-decoration: none;
+        font-size: 1.5rem;
+        padding: .5rem;
+        margin: 0 .7rem;
     }
 }

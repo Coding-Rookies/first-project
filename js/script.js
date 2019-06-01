@@ -4,11 +4,16 @@ let mobileNav = document.querySelector(".mobile-nav");
 
 backdrop.addEventListener("click", function () {
     mobileNav.classList.remove("active");
-    backdrop.classList.remove("active");
+    setTimeout(function () {
+        backdrop.classList.remove("active");
+    }, 500);
 })
 
 // Menu hamburger 
 toggleButton.addEventListener("click", function () {
-    mobileNav.classList.add("active");
-    backdrop.classList.add("active");
+    mobileNav.classList.toggle("active");
+    // backdrop.classList.toggle("active");
+    setTimeout(function () {
+        backdrop.classList.toggle("active");
+    }, 500)
 })
