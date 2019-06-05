@@ -10,10 +10,52 @@
     <link rel="stylesheet" href='https://use.fontawesome.com/releases/v5.8.2/css/all.css'
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
 </head>
 
 <body>
     <script src="js/script.js"></script>
+    <script src="js/form.js"></script>
+    
+<footer>
+    <div class="contact-section">
+    <div class="sect-title">
+    contact us
+    </div>
+    <div class="contact">
+        <form action="https://formspree.io/our email here" method="POST"  class="contact-form" name="contactForm" >
+            <div class="input-fields">
+
+                <label for="name">
+            <input type="text" class="input"  name="uname" placeholder="YOUR NAME*" required  minlength="3">
+        </label>
+            <input type="text" class="input" name="email" placeholder="YOUR E-MAIL*" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$">
+            
+            <input type="text" class="input" name="subject" placeholder="SUBJECT" >
+        
+        </div>
+        <div class="msg">
+            <textarea class="textarea" name="message" placeholder="YOUR MESSAGE*" required minlength="8"></textarea>
+        </div>
+        </div>
+            <button type="submit" class="btn-main" onclick="validateForm()"><p>Send</p></button>
+
+        </form> 
+    
+</div>
+<div class="footer-section">
+    &copy; Copyright 2019 Coding Rookies  
+    <a href="https://www.w3schools.com"><i  class="fab fa-pinterest"></i></a>
+    <a href="https://www.w3schools.com"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.w3schools.com"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.w3schools.com"><i class="fab fa-twitter"></i></a>
+    
+</div>
+</div>
+
+</footer>
+
 </body>
 
 </html>

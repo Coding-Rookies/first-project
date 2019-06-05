@@ -1,0 +1,120 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+
+}
+
+.footer-section{
+   
+    color: #222;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 75px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.footer-section .fab {
+    font-size: 50px;
+    padding-top: 10px;
+    padding-left: 30px;
+}
+a{
+    color:#222222;
+}
+
+.contact-section{
+
+    width:100%;
+    height: 700px;
+    background: #222222;
+    background-image: url(../images/footer/worldmap2.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+  
+}
+.contact{
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 20px;
+ }
+
+ .contact-form{
+        margin: 0 auto;
+        padding: 30px;
+        border-radius: 5px;
+        display: flex;  
+ }
+
+ .input-fields{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+    
+ }
+
+ .input-fields, .msg{
+    width:100%;
+ }
+
+ .input-fields .input, .msg textarea{
+
+    margin: 10px 0;
+    border: 0;
+    border-bottom: 2px solid;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: 700;
+ }
+
+ .msg textarea{
+     height: 210px;
+ }
+
+
+
+.sect-title{
+
+    text-align: center;
+    color: #ffffff;
+    padding-top: 4%;
+    
+}
+
+ .btn-main{
+    position: absolute;
+        top: 60%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%) 
+        
+ }
+
+ .btn-main p:hover{
+     color: white;
+ }
+
+
+
+@media screen and (max-width:641px){
+
+    .contact-form{
+        flex-direction: column;
+    }
+
+    .msg textarea{
+
+        height: 80px;
+    }
+    .input-fields, .msg{
+        width: 100%;
+    }
+
+
+}
